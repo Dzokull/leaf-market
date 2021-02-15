@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardMedia, CardContent, CardActions, Typography, IconButton} from '@material-ui/core';
+import { Card, CardMedia, CardContent, CardActions, Typography, IconButton, Grid, Button} from '@material-ui/core';
 import { AddShoppingCart } from '@material-ui/icons';
 import useStyles from './styles';
 
@@ -9,22 +9,16 @@ const Product = ({ product }) => {
     console.log(product);
     return (
         <Card className={classes.root} >
-            <CardMedia className={classes.media} image={product.media.source} title={product.name}/>
-            <CardContent>
-                <div className={classes.cardContent}>
-                    <Typography variant='h5' gutterBottom>
-                        {product.name}
-                    </Typography>
-                    <Typography variant='h5' gutterBottom>
-                        {product.price.formatted_with_symbol}
-                    </Typography>
-                </div>
-                <Typography variant = 'body2' color='textSecondary' dangerouslySetInnerHTML={{ __html: product.description}} />
-            </CardContent> 
-            <CardActions disableSpacing className={classes.cardActions}>
-                <IconButton aria-label="Add tp Card">
-                    <AddShoppingCart />
-                </IconButton>
+            <CardMedia className={classes.media} image={product.media.source} title={product.name}>
+                <Typography variant='h6' gutterBottom>
+                    {product.name}
+                </Typography>
+               
+            </CardMedia>
+            <CardActions disableSpacing className={classes.cardActions}>    
+                <Button endIcon={<AddShoppingCart />} size='small' variant='outlined' color='secondary' aria-label="Add to Cart">
+                    {product.price.formatted_with_symbol}
+                </Button>
             </CardActions>
         </Card>
     )

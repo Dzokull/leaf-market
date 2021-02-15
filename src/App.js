@@ -1,27 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { commerce } from './lib/commerce';
-// import Products from './components/Products/Products';
-// import Navbar from './components/Navbar/Navbar';
-import { Products, Navbar } from './components'
-
+import React from 'react';
+import { Route } from 'react-router-dom';
+import CssBaseline from "@material-ui/core/CssBaseline";
+import './App.css';
+import Home from './components'
+import Store from './components/Store/Store';
+import Pack from './components/Pack';
+import Signup from './components/Auth/Signup';
+import Signin from './components/Auth/Signin'
 const App = () => {
-    const [products , setProducts] = useState([]);
-
-    const fetchProducts = async () => {
-        const { data } = await commerce.products.list();
-
-        setProducts(data);
-    }
-    useEffect(() => {
-        fetchProducts();
-    }, []);
-
-    console.log(products)
-
     return (
         <div>
-            <Navbar />
-           <Products products={products}/>
+           <CssBaseline />
+           <Route exact path='/' component = { Home } />
+           <Route path='/store' component = { Store } />
+           <Route path='/membership' component = { Pack } />
+           <Route path='/signup' component = { Signup } />
+           <Route path='/signin' component = { Signin } />
         </div>
     )
 }
