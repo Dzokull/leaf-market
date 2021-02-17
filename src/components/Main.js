@@ -78,20 +78,6 @@ const Main = () => {
                     </div>
                 </Container>
                 </div>
-                <Grid container justify='center' spacing={1} className={classes.heroGrid}>
-                    <Grid item>
-                        <Paper className={classes.heroPaper}/>
-                    </Grid>
-                    <Grid item>
-                        <Paper className={classes.heroPaper}/>
-                    </Grid>
-                    <Grid item>
-                        <Paper className={classes.heroPaper}/>
-                    </Grid>
-                    <Grid item>
-                        <Paper className={classes.heroPaper}/>
-                    </Grid>
-                </Grid>
             </ThemeProvider>
         </React.Fragment>
     )

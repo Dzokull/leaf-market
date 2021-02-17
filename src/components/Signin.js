@@ -12,7 +12,7 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import Logo from '../../assets/images/Leaf_logo_1.png'
+import Logo from '../assets/images/Leaf_logo_1.png'
 
 function Copyright() {
   return (

@@ -5,8 +5,9 @@ import './App.css';
 import Home from './components'
 import Store from './components/Store/Store';
 import Pack from './components/Pack';
-import Signup from './components/Auth/Signup';
-import Signin from './components/Auth/Signin'
+import Signup from './components/Signup';
+import Signin from './components/Signin';
+import Dashboard from './components/Dashboard/Dashboard';
 const App = () => {
     return (
         <div>
@@ -14,8 +15,9 @@ const App = () => {
            <Route exact path='/' component = { Home } />
            <Route path='/store' component = { Store } />
            <Route path='/membership' component = { Pack } />
-           <Route path='/signup' component = { Signup } />
+           <Route path='/signup' component = { Signup } /> 
            <Route path='/signin' component = { Signin } />
+           <Route path='/dashboard' component = { Dashboard } />
         </div>
     )
 }

@@ -12,8 +12,8 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Logo from '../../assets/images/Leaf_logo_1.png'
-import Navbar from '../Navbar/Navbar';
+import Logo from '../assets/images/Leaf_logo_1.png'
+import Navbar from './Navbar/Navbar';
 
 function Copyright() {
   return (
