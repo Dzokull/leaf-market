@@ -3,14 +3,14 @@ import { Card, CardMedia, CardContent, CardActions, Typography, FormControlLabel
 import { AddShoppingCart } from '@material-ui/icons';
 import useStyles from './styles';
 
-function CheckboxExample({price}){
+function CheckboxExample({product, addToCart}){
     const [checked, setChecked] = React.useState(false)
     return (
         <div>
             <FormControlLabel 
                 control={<Checkbox 
-                    icon={<Button endIcon={<AddShoppingCart />} size='small' variant='outlined' color='secondary' aria-label="Add to Cart" onClick={()=>(console.log('blush'))}>
-                    {price}
+                    icon={<Button endIcon={<AddShoppingCart />} size='small' variant='outlined' color='secondary'>
+                    {product.price.formatted_with_symbol}
                 </Button>}
                     checkedIcon={<Button endIcon={<AddShoppingCart />} size='small' variant='contained' color='secondary' aria-label="Add to Cart" >
                     Added To Cart
@@ -34,10 +34,9 @@ const Product = ({ product, onAddToCart }) => {
                 <Typography variant='h6' gutterBottom>
                     {product.name}
                 </Typography>
-               
             </CardMedia>
             <CardActions disableSpacing className={classes.cardActions}> 
-                <CheckboxExample price={product.price.formatted_with_symbol}/>
+                <CheckboxExample product={product} addToCart={onAddToCart}/>
                 {/*<Button endIcon={<AddShoppingCart />} size='small' variant='outlined' color='secondary' aria-label="Add to Cart" onClick={() => onAddToCart(product.id, 1)}>
                     {product.price.formatted_with_symbol}
             </Button>*/}

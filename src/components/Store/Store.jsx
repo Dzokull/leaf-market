@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { commerce } from '../../lib/commerce';
 import Products from '../Products/Products';
 import clsx from 'clsx';
-import {CssBaseline , Drawer, Box, AppBar, Toolbar, List, Typography,
-Divider, IconButton, Badge, Container, Link} from '@material-ui/core';
+import { CssBaseline , Drawer, Box, AppBar, Toolbar, List, Typography,
+Divider, IconButton, Badge, Container, Link } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import { AddShoppingCart, Settings } from '@material-ui/icons';
@@ -38,16 +38,27 @@ const App = () => {
     }
 
     const handleAddToCart = async (productId, quantity) => {
-        const item = await commerce.cart.add(productId, quantity);
-
-        setCart(item.cart)
+        const {cart} = await commerce.cart.add(productId, quantity);
+        setCart(cart);
+    }
+    const handleUpdate = async (productId, quantity) => {
+      const {cart} = await commerce.cart.update(productId,{ quantity});
+      setCart(cart);
+    }
+    const handleRemove = async (productId) => {
+      const {cart} = await commerce.cart.remove(productId);
+      setCart(cart);
+    }
+    const handleEmpty = async () => {
+      const {cart} = await commerce.cart.empty();
+      setCart(cart);
     }
     useEffect(() => {
         fetchProducts();
         fetchCart()
     }, []);
     //====Inner APP Functions
-    console.log(cart)
+    
     const classes = useStyles();
     const [open, setOpen] = React.useState(true);
     const handleDrawerOpen = () => {
@@ -83,6 +94,7 @@ const App = () => {
               <Settings />
             </Badge>
           </IconButton>
+          
         </Toolbar>
       </AppBar>
       <Drawer
@@ -105,7 +117,11 @@ const App = () => {
       <main className={classes.content}>
         <Container maxWidth="lg" className={classes.container}>
             <Products products={products} onAddToCart={handleAddToCart}/>
-            <Cart cart={cart} />
+            <Cart cart={cart} 
+            handleUpdate ={handleUpdate}
+            handleRemove={handleRemove}
+            handleEmpty={handleEmpty}
+            />
           <Box pt={4}>
             <Copyright />
           </Box>
