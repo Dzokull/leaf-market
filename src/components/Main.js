@@ -8,6 +8,7 @@ import Leaf1 from '../assets/images/logo_leaf2.png';
 const useStyles = makeStyles((theme) => ({
     toolbar: theme.mixins.toolbar,
       heroContent: {
+        height: '89vh',
         backgroundImage: 'url(https://source.unsplash.com/random)',
         backgroundRepeat: 'no-repeat',
         backgroundColor:

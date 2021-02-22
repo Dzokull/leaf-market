@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/static/css/main.21950e0a.chunk.css",
-    "main.js": "/static/js/main.8c6491e9.chunk.js",
-    "main.js.map": "/static/js/main.8c6491e9.chunk.js.map",
+    "main.js": "/static/js/main.fe9d1bfc.chunk.js",
+    "main.js.map": "/static/js/main.fe9d1bfc.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.900dd88b.js",
     "runtime-main.js.map": "/static/js/runtime-main.900dd88b.js.map",
-    "static/js/2.52aa0586.chunk.js": "/static/js/2.52aa0586.chunk.js",
-    "static/js/2.52aa0586.chunk.js.map": "/static/js/2.52aa0586.chunk.js.map",
+    "static/js/2.8763e5a4.chunk.js": "/static/js/2.8763e5a4.chunk.js",
+    "static/js/2.8763e5a4.chunk.js.map": "/static/js/2.8763e5a4.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.21950e0a.chunk.css.map": "/static/css/main.21950e0a.chunk.css.map",
-    "static/js/2.52aa0586.chunk.js.LICENSE.txt": "/static/js/2.52aa0586.chunk.js.LICENSE.txt",
+    "static/js/2.8763e5a4.chunk.js.LICENSE.txt": "/static/js/2.8763e5a4.chunk.js.LICENSE.txt",
     "static/media/Leaf_logo_1.041f7ba5.png": "/static/media/Leaf_logo_1.041f7ba5.png",
     "static/media/logo_leaf2.c8aa1c50.png": "/static/media/logo_leaf2.c8aa1c50.png"
   },
   "entrypoints": [
     "static/js/runtime-main.900dd88b.js",
-    "static/js/2.52aa0586.chunk.js",
+    "static/js/2.8763e5a4.chunk.js",
     "static/css/main.21950e0a.chunk.css",
-    "static/js/main.8c6491e9.chunk.js"
+    "static/js/main.fe9d1bfc.chunk.js"
   ]
 }

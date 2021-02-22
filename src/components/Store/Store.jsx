@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { commerce } from '../../lib/commerce';
+
 import Products from '../Products/Products';
 import clsx from 'clsx';
 import { CssBaseline , Drawer, Box, AppBar, Toolbar, List, Typography,
@@ -84,11 +85,13 @@ const App = () => {
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             Leaf Market
           </Typography>
-          <IconButton color="inherit">
-            <Badge color="secondary" badgeContent={cart.total_items}>
-              <AddShoppingCart />
-            </Badge>
-          </IconButton>
+          <Link color='inherit' href="/cart">
+            <IconButton color="inherit">
+              <Badge color="secondary" badgeContent={cart.total_items}>
+                <AddShoppingCart />
+              </Badge>
+            </IconButton>
+          </Link>
           <IconButton color="inherit">
             <Badge color="secondary">
               <Settings />
@@ -116,12 +119,12 @@ const App = () => {
       </Drawer>
       <main className={classes.content}>
         <Container maxWidth="lg" className={classes.container}>
-            <Products products={products} onAddToCart={handleAddToCart}/>
-            <Cart cart={cart} 
+          <Cart cart={cart}
             handleUpdate ={handleUpdate}
             handleRemove={handleRemove}
             handleEmpty={handleEmpty}
-            />
+            id="shoppingCart"/>
+          <Products products={products} onAddToCart={handleAddToCart}/>
           <Box pt={4}>
             <Copyright />
           </Box>
