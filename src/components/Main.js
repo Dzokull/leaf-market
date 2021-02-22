@@ -64,7 +64,7 @@ const Main = () => {
                         <div className={classes.heroButtons}>
                         <Grid container spacing={2} justify="center">
                             <Grid item>
-                            <Button variant="contained" color="primary" component={Link} to='/membership'>
+                            <Button variant="contained" color="primary">
                                 Become A Member
                             </Button>
                             </Grid>
