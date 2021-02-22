@@ -36,10 +36,10 @@ const Product = ({ product, onAddToCart }) => {
                 </Typography>
             </CardMedia>
             <CardActions disableSpacing className={classes.cardActions}> 
-                <CheckboxExample product={product} addToCart={onAddToCart}/>
-                {/*<Button endIcon={<AddShoppingCart />} size='small' variant='outlined' color='secondary' aria-label="Add to Cart" onClick={() => onAddToCart(product.id, 1)}>
+                {/*<CheckboxExample product={product} addToCart={onAddToCart}/>*/}
+                <Button endIcon={<AddShoppingCart />} size='small' variant='outlined' color='secondary' aria-label="Add to Cart" onClick={() => onAddToCart(product.id, 1)}>
                     {product.price.formatted_with_symbol}
-            </Button>*/}
+                </Button>
             </CardActions>
         </Card>
     )
